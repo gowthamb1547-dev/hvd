@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 340 30% 12%;
+    --foreground: 340 20% 95%;
+
+    --card: 340 30% 16%;
+    --card-foreground: 340 20% 95%;
+
+    --popover: 340 30% 16%;
+    --popover-foreground: 340 20% 95%;
+
+    --primary: 340 80% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 330 50% 25%;
+    --secondary-foreground: 340 20% 95%;
+
+    --muted: 340 20% 20%;
+    --muted-foreground: 340 15% 65%;
+
+    --accent: 25 80% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 340 30% 25%;
+    --input: 340 30% 25%;
+    --ring: 340 80% 60%;
+
+    --radius: 0.75rem;
+
+    --valentine-rose: 340 82% 52%;
+    --valentine-pink: 330 70% 70%;
+    --valentine-blush: 350 60% 85%;
+    --valentine-deep: 345 90% 30%;
+    --valentine-gold: 40 85% 55%;
+    --valentine-warm: 15 80% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px hsl(340 80% 60% / 0.5), 0 0 40px hsl(340 80% 60% / 0.3);
+  }
+
+  .text-glow-gold {
+    text-shadow: 0 0 20px hsl(40 85% 55% / 0.5), 0 0 40px hsl(40 85% 55% / 0.3);
+  }
+
+  .box-glow {
+    box-shadow: 0 0 30px hsl(340 80% 60% / 0.3), 0 0 60px hsl(340 80% 60% / 0.15);
+  }
+
+  .font-cursive {
+    font-family: 'Great Vibes', cursive;
+  }
+
+  .font-handwritten {
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .font-romantic {
+    font-family: 'Satisfy', cursive;
+  }
+}
